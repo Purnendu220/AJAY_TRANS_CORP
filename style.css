@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300;400;500&display=swap');
+:root{
+    --c-primary:#f50507;   
+    --c-body:#e4ecf4;   
+}
+
+*{scroll-margin-top: 120px;}
+html{scroll-behavior: smooth;}
+
+body{font:400 16px 'Georama', sans-serif; background: var(--c-body)}
+
+.fw_300{font-weight: 300}
+.fw_500{font-weight: 500}
+
+.cp{cursor: pointer;}
+
+.animi_left{animation: slideInLeft 1s infinite;}
+@keyframes slideInLeft{    
+    50%{transform: translateX(10px);}
+    
+}
+
+.animi_rightToLeft{animation:animi_rightToLeft  5s ease forwards infinite; transform: rotate(0deg) scaleX(-1); position: relative; }
+@keyframes animi_rightToLeft{   
+    0%{transform: translateX(-1); position: absolute; right: 20px; opacity: 0;}
+    100%{transform: translateX(-1); position: absolute; right: 50%;}
+    
+}
+
+/* PROJECT START CODE */
+header{min-height: 50px; background-color: var(--bs-white); background:linear-gradient(to right, #fff 10%,  rgba(256, 256, 256, 0.9)); border-bottom:1px dashed var(--c-primary);}
+header .nav-link{font-size: 18px; color: var(--bs-black); font-weight: 400; padding: 6px 14px!important;}
+header .nav-item.active a{color: var(--c-primary);}
+header .navbar-toggler {background-color:var(--bs-black); border: 0;}
+header .navbar-toggler-icon {filter:brightness(0) invert(1);}
+
+main{min-height: calc(100vh - 276px);}
+
+.atc_carousel .carousel-item img{height: 80vh; object-fit: cover;}
+.atc_carousel .carousel-caption h2{text-shadow: 0 1px 1px #070707;}
+.atc_carousel .carousel-caption{bottom: initial; top: 30%; background: rgba(256,256,256,0.5); backdrop-filter: blur(8px); max-width: 600px; width: 90%; left: 50%; transform: translateX(-50%); right: 0;}
+
+.atc_shipquote{margin-top: -70px;}
+
+.accrodionss .accordion-button:not(.collapsed){background-color: #ff000014!important;}
+
+footer .socialMedia a{ width: 40px; height: 40px; display: inline-block; text-decoration: none; margin: 4px; font-size: 22px; color: #fff; transition: all 0.8s ease;}
+footer .socialMedia a:hover{ transition: all 0.4s ease; transform: scale(1.1) rotate(360deg); background-color: var(--bs-black)!important;}
+/* PROJECT END CODE */
+
+
+@media only screen and (max-width:767.98px){
+    header{position: static; background-color: #fff;}
+    header .nav-link{margin-bottom: 10px; border-bottom: 1px dashed var(--c-primary);}
+    .toggleNav{display: none;}
+    .asideMenubar{width: 100%; padding: 20px; display: block; position: static;}
+    .main{margin-left: 0; display: block;}
+}
+@media only screen and (max-width:575.98px){
+    @keyframes animi_rightToLeft{   
+        0%{transform: translateX(-1); position: absolute; right: 0; opacity: 0;}
+        100%{transform: translateX(-1); position: absolute; right: 40%;}
+        
+    }
+}
+@media only screen and (max-width:480px){
+    @keyframes animi_rightToLeft{   
+        0%{transform: translateX(-1); position: static; right: 20; opacity: 1;}
+        100%{transform: translateX(-1); position: static; right: 0;}
+        
+    }
+}

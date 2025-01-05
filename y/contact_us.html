@@ -19,7 +19,7 @@
 <body>
 
   <!-- HEADER CODE START -->
-  <header class="w-100 shadow container-fluid">
+  <header class="w-100 shadow container-fluid position-sticky top-0 z-3">
     <nav class="navbar navbar-expand-lg py-0 container-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/logo.png" width="90"
@@ -36,16 +36,16 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html"><i class="fas fa-home"
-                    aria-hidden="true"></i> Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="index.html#ShipNow"><i class="fas fa-truck"></i> Ship Now</a> </li>
-              <li class="nav-item"><a class="nav-link" href="index.html#ShipNow"><i class="fas fa-file-signature"></i> Get a
-                  Quote</a> </li>
-              <li class="nav-item"><a class="nav-link" href="index.html#Aboutus"><i class="fas fa-address-card"></i> About us</a>
+              <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" aria-current="page" href="index.html"><i
+                    class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+              <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="index.html#ShipNow"><i
+                    class="fas fa-truck"></i> Ship/Quote Now</a> </li>
+              
+              <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="index.html#Aboutus"><i class="fas fa-address-card"></i> About us</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="index.html#OurServices"><i class="fas fa-paper-plane"></i> Our
+              <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="index.html#OurServices"><i class="fas fa-paper-plane"></i> Our
                   Services</a> </li>
-              <li class="nav-item active"><a class="nav-link" href="contact_us.html"><i class="fas fa-phone-volume"></i>
+              <li class="nav-item active" data-bs-dismiss="offcanvas"><a class="nav-link" href="contact_us.html"><i class="fas fa-phone-volume"></i>
                   Contact us</a> </li>
 
             </ul>

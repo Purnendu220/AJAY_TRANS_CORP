@@ -19,45 +19,43 @@
 <body>
 
     <!-- HEADER CODE START -->
-    <header class="w-100 shadow container-fluid">
+    <header class="w-100 shadow container-fluid position-sticky top-0 z-3">
         <nav class="navbar navbar-expand-lg py-0 container-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/logo.png" width="90"
-                        height="90" alt="Ajay Transport Corporation"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Top Navigation</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html"><i class="fas fa-home"
-                                  aria-hidden="true"></i> Home</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="index.html#ShipNow"><i class="fas fa-truck"></i> Ship Now</a> </li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#ShipNow"><i class="fas fa-file-signature"></i> Get a
-                                Quote</a> </li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#Aboutus"><i class="fas fa-address-card"></i> About us</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="index.html#OurServices"><i class="fas fa-paper-plane"></i> Our
-                                Services</a> </li>
-                            <li class="nav-item"><a class="nav-link" href="contact_us.html"><i class="fas fa-phone-volume"></i>
-                                Contact us</a> </li>
-              
-                          </ul>
-
-                    </div>
-                </div>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/logo.png" width="90"
+                height="90" alt="Ajay Transport Corporation"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Top Navigation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" aria-current="page" href="index.html"><i
+                        class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                  <li class="nav-item active" data-bs-dismiss="offcanvas"><a class="nav-link" href="index.html#ShipNow"><i
+                        class="fas fa-truck"></i> Ship/Quote Now</a> </li>
+                  
+                  <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="index.html#Aboutus"><i class="fas fa-address-card"></i> About us</a>
+                  </li>
+                  <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="index.html#OurServices"><i class="fas fa-paper-plane"></i> Our
+                      Services</a> </li>
+                  <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="contact_us.html"><i class="fas fa-phone-volume"></i>
+                      Contact us</a> </li>
+    
+                </ul>
+    
+              </div>
             </div>
+          </div>
         </nav>
-
-    </header>
+    
+      </header>
     <!-- HEADER CODE END -->
 
     <!-- TRACK CODE START -->
@@ -72,26 +70,42 @@
                         </h2>
 
                         <div class="row mt-5">
+                            <div class="">
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label fs-5 fw_500">Dimensions + Weight</label>
+                                    <input type="text" class="form-control" placeholder="" required></div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label fs-5 fw_500">Description of materials</label>
+                                    <textarea type="text" class="form-control" placeholder="" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
                             <h2 class="fs-5">From</h2>
                             <div class="col-lg-4">
-                                <div class="mb-3"><input type="text" class="form-control" placeholder="Location"></div>
+                                <div class="mb-3"><input type="text" class="form-control" placeholder="Location" required></div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="mb-3"><input type="text" class="form-control" placeholder="City"></div>
+                                <div class="mb-3"><input type="text" class="form-control" placeholder="City" required></div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="mb-3"><input type="number" class="form-control" placeholder="Pin Code"></div>
+                                <div class="mb-3"><input type="number" class="form-control" placeholder="Pin Code" required></div>
                             </div>
 
                             <h2 class="fs-5 mt-3">To</h2>
+                            
                             <div class="col-lg-4">
-                                <div class="mb-3"><input type="text" class="form-control" placeholder="Location"></div>
+                                <div class="mb-3"><input type="text" class="form-control" placeholder="Location" required></div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="mb-3"><input type="text" class="form-control" placeholder="City"></div>
+                                <div class="mb-3"><input type="text" class="form-control" placeholder="City" required></div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="mb-3"><input type="number" class="form-control" placeholder="Pin Code"></div>
+                                <div class="mb-3"><input type="number" class="form-control" placeholder="Pin Code" required></div>
                             </div>
                         </div>
 

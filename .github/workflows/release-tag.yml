@@ -1,0 +1,88 @@
+name: Auto Tag and Create Release
+
+on:
+  push:
+    branches:
+      - master  # Adjust this to your main branch if necessary
+      - open-space  # Adjust this to your main branch if necessary
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Fetch all tags
+        run: git fetch --tags
+
+      - name: Get latest commit message
+        id: get_commit_message
+        run: |
+          # Get the latest commit message
+          commit_message=$(git log -1 --pretty=%B)
+          echo "Latest commit message: $commit_message"
+          echo "::set-output name=commit_message::$commit_message"
+
+      - name: Get the latest tag
+        id: get_latest_tag
+        run: |
+          # Get the latest tag, or default to "v.6.2.0.0" if no tags are found
+          TAG=$(git tag | sort -V | tail -n 1 || echo "v.6.2.0.0")
+          echo "Latest tag: $TAG"
+          echo "::set-output name=latest_tag::$TAG"
+
+      - name: Bump tag version
+        id: bump_tag
+        run: |
+          # Extract the version number from the tag (e.g., v.6.2.0.19)
+          latest_tag="${{ steps.get_latest_tag.outputs.latest_tag }}"
+          echo "Latest tag is $latest_tag"
+
+          # Strip the 'v.' prefix and split by '.' into an array
+          version=${latest_tag#v.}
+          IFS='.' read -r -a version_parts <<< "$version"
+
+          # Increment the last version part (the fourth number)
+          new_version="${version_parts[0]}.${version_parts[1]}.${version_parts[2]}.$((version_parts[3] + 1))"
+          new_tag="v.${new_version}"
+          echo "New tag will be $new_tag"
+
+          # Set the new tag as an output to use in the next steps
+          echo "::set-output name=new_tag::$new_tag"
+
+      - name: Create and push new tag
+        run: |
+          new_tag="${{ steps.bump_tag.outputs.new_tag }}"
+          echo "Creating and pushing new tag: $new_tag"
+
+          # Create the new tag
+          git tag -a "$new_tag" -m "Release $new_tag"
+          
+          # Push the tag
+          git push origin "$new_tag"
+
+      - name: Generate GitHub Release with Auto Release Notes
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ steps.bump_tag.outputs.new_tag }}  # Use the newly created tag
+          release_name: ${{ steps.get_commit_message.outputs.commit_message }}  # Use the commit message as the release name
+          generate_release_notes: true  # Generate release notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Install msmtp
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y msmtp
+
+      # - name: Send email notification
+      #   run: |
+      #     echo "Sending email notification..."
+      #     echo -e "Subject: New Tag Created: ${{ steps.bump_tag.outputs.new_tag }}\n\nA new tag has been created: ${{ steps.bump_tag.outputs.new_tag }}" | msmtp --host=smtp.gmail.com --port=587 --auth=on --user="${{ secrets.GMAIL_USERNAME }}" --password="${{ secrets.GMAIL_PASSWORD }}" --from="${{ secrets.GMAIL_USERNAME }}" "${{ secrets.GMAIL_TO }}"

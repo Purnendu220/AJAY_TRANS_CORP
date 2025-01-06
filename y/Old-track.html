@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/fevicon.jpg" type="image/png">
+    <title>AJAY TRANSPORT CORPORATION :: Track</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/4e1ddfd1ed.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <!-- HEADER CODE START -->
+    <header class="w-100 shadow container-fluid position-sticky top-0 z-3">
+        <nav class="navbar navbar-expand-lg py-0 container-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/logo.png" width="90"
+                height="90" alt="Ajay Transport Corporation"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Top Navigation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item active"><a class="nav-link" aria-current="page" href="index.html"><i
+                        class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                  <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#ShipNow"><i
+                        class="fas fa-truck"></i> Ship/Quote Now</a> </li>
+                  
+                  <li class="nav-item"><a class="nav-link" href="#Aboutus"><i class="fas fa-address-card"></i> About us</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#OurServices"><i class="fas fa-paper-plane"></i> Our
+                      Services</a> </li>
+                  <li class="nav-item"><a class="nav-link" href="contact_us.html"><i class="fas fa-phone-volume"></i>
+                      Contact us</a> </li>
+    
+                </ul>
+    
+              </div>
+            </div>
+          </div>
+        </nav>
+    
+      </header>
+    <!-- HEADER CODE END -->
+
+    <!-- TRACK CODE START -->
+    <main class="my-4">
+        <section class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form role="form" class="position-relative">
+                        <h2 class="fw-bold fs-4 text-black mb-3 d-flex align-items-center justify-content-between">Track
+                            Your Shipment
+                            <i class="fas fa-truck animi_rightToLeft" aria-hidden="true"></i>
+                        </h2>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter your tracking number">
+                            <button class="btn btn-danger btn-lg" type="button" id="button-addon2">Track</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <div class="col-md-8 offset-md-2 p-4 bg-white rounded">
+                The tracking code info go here...
+            </div>
+
+        </section>
+
+        <section class="bg-white pt-2 pb-5 mt-5 accrodionss">
+            <div class="col-md-8 offset-md-2 pt-3">
+                <h2 class="mb-3">Frequently Asked Questions</h2>
+                <div class="accordion mt-3" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw_500" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What Is a Tracking Number & Where Can I Find It?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-muted">
+                                <p>A tracking number or ID is a combination of numbers and possibly letters that
+                                    uniquely identifies your shipment for national or international tracking. </p>
+
+                                <p>Usually, the shipper or online shop is able to provide the tracking number or ID. If
+                                    you have ordered a product in an online shop, the confirmation email or shipment
+                                    tracking notification often contains the tracking number or ID. If not, please
+                                    contact your shipper or online shop.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw_500" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                When will my tracking information appear?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-muted">
+                                <p>Tracking events usually appear 24-48 hours after receiving the Track and Trace ID. In
+                                    general, once the shipment has reached our facility, a tracking event will appear.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw_500" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Why is my tracking number/ID not working?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-muted">
+                                <p>Please make sure you entered the correct tracking number in the correct format: Check
+                                    for minimum length of 5 characters, and if there are any special characters in your
+                                    input. Tab, comma, space and semicolon are understood as separators between several
+                                    tracking IDs.</p>
+
+                                <p>If your tracking ID is not working, please contact your shipper or online shop.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw_500" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                                If I do not have my tracking number, is it still possible to track my shipment?
+                            </button>
+                        </h2>
+                        <div id="collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-muted">
+                                <p>If you do not have a tracking number, we advise you to contact your shipper. However, if you have other shipping reference numbers, they may work using shipment tracking systems of the specific business unit in charge of the shipment (for example: DHL Express or DHL Freight). </p>
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </main>
+    <!-- TRACK CODE END -->
+
+    <!-- FOOTER CODE START -->
+    <footer class="bg-white py-4">
+        <div class="container d-flex justify-content-between align-items-center flex-column flex-md-row">
+            <div class="text-center fs-6"> <a class="text-decoration-none text-black fw-bold" href="index.html">
+                    <img class="rounded-circle" src="images/logo.png" width="60" height="60" alt="ATC Transport">
+                    <br>Ajay Transport Corporation
+                </a></div>
+            <p class="my-3 my-md-0">2025 &copy; - all rights reserved</p>
+            <div class="socialMedia d-flex">
+                <a href="#"
+                    class="rounded-circle bg-danger border p-2 d-flex justify-content-center align-items-center"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a href="#"
+                    class="rounded-circle bg-danger border p-2 d-flex justify-content-center align-items-center"><i
+                        class="fab fa-twitter-square"></i></a>
+                <a href="#"
+                    class="rounded-circle bg-danger border p-2 d-flex justify-content-center align-items-center"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="#"
+                    class="rounded-circle bg-danger border p-2 d-flex justify-content-center align-items-center"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="#"
+                    class="rounded-circle bg-danger border p-2 d-flex justify-content-center align-items-center"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER CODE END -->
+
+
+    <script>
+        $("header .nav-item").click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    </script>
+</body>
+
+</html>

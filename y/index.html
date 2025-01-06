@@ -19,7 +19,7 @@
 <body>
 
   <!-- HEADER CODE START -->
-  <header class="w-100 shadow container-fluid">
+  <header class="w-100 shadow container-fluid position-sticky top-0 z-3">
     <nav class="navbar navbar-expand-lg py-0 container-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/logo.png" width="90"
@@ -36,16 +36,19 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item active"><a class="nav-link" aria-current="page" href="index.html"><i class="fas fa-home"
-                    aria-hidden="true"></i> Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#ShipNow"><i class="fas fa-truck"></i> Ship Now</a> </li>
-              <li class="nav-item"><a class="nav-link" href="#ShipNow"><i class="fas fa-file-signature"></i> Get a
-                  Quote</a> </li>
-              <li class="nav-item"><a class="nav-link" href="#Aboutus"><i class="fas fa-address-card"></i> About us</a>
+              <li class="nav-item active" data-bs-dismiss="offcanvas"><a class="nav-link" aria-current="page"
+                  href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+              <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#ShipNow"><i
+                    class="fas fa-truck"></i> Ship/Quote Now</a> </li>
+
+              <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#Aboutus"><i
+                    class="fas fa-address-card"></i> About us</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#OurServices"><i class="fas fa-paper-plane"></i> Our
+              <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#OurServices"><i
+                    class="fas fa-paper-plane"></i> Our
                   Services</a> </li>
-              <li class="nav-item"><a class="nav-link" href="contact_us.html"><i class="fas fa-phone-volume"></i>
+              <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="contact_us.html"><i
+                    class="fas fa-phone-volume"></i>
                   Contact us</a> </li>
 
             </ul>
@@ -59,148 +62,153 @@
   <!-- HEADER CODE END -->
 
   <main>
-  <!-- CAROUSEL CODE START -->
-  <section id="atc_carousel" class="carousel slide atc_carousel" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/slider1.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption shadow rounded-4 border text-start p-4">
-          <h2 class="fw-bold fs-4 text-white mb-3 d-flex align-items-center justify-content-between">Track Your Shipment
-            <i class="fas fa-truck animi_rightToLeft" aria-hidden="true"></i></h2>
-          <form id="trackForm" role="form" class="row g-3" method="post">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Enter your tracking number" id="track" name="track">
-              <button class="btn btn-danger btn-lg" type="button" id="button-addon2">Track</button>
+    <!-- CAROUSEL CODE START -->
+    <section id="atc_carousel" class="carousel slide atc_carousel" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/slider1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption shadow rounded-4 border text-start p-4">
+            <h2 class="fw-bold fs-4 text-white mb-3 d-flex align-items-center justify-content-between">Track Your
+              Shipment
+              <i class="fas fa-truck animi_rightToLeft" aria-hidden="true"></i>
+            </h2>
+            <form id="trackForm" role="form" class="row g-3" method="post">
+              <div class="input-group">
+                <input type="text" class="form-control" required="" placeholder="Enter your tracking number" id="track"
+                  name="track">
+                <button class="btn btn-danger btn-lg" type="button" id="button-addon2">Track</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- CAROUSEL CODE END -->
+
+    <!-- TRACK CODE START -->
+    <section class="atc_shipquote position-relative z-2" id="ShipNow">
+      <div class="row mx-0 text-center">
+        <div class="col-md-4 offset-md-2 col-lg-3 offset-lg-3">
+          <div class="card border-danger mb-4 mb-md-0">
+            <div class="card-body">
+              <h1 class="card-title fw-bold fs-5"><i
+                  class="fas fa-truck text-danger position-absolute start-50 top-0 translate-middle fs-2"></i><br> Ship
+                Now</h1>
+              <p class="card-text text-muted">Get the Perfect Service</p>
+              <a href="ship.html" class="btn btn-danger stretched-link"><i class="far fa-hand-point-right"></i> Go</a>
             </div>
-          </form>
-
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-  <!-- CAROUSEL CODE END -->
-
-  <!-- TRACK CODE START -->
-  <section class="atc_shipquote position-relative z-2" id="ShipNow">
-    <div class="row mx-0 text-center">
-      <div class="col-md-4 offset-md-2 col-lg-3 offset-lg-3">
-        <div class="card border-danger mb-4 mb-md-0">
-          <div class="card-body">
-            <h1 class="card-title fw-bold fs-5"><i
-                class="fas fa-truck text-danger position-absolute start-50 top-0 translate-middle fs-2"></i><br> Ship
-              Now</h1>
-            <p class="card-text text-muted">Get the Perfect Service</p>
-            <a href="ship.html" class="btn btn-danger stretched-link"><i class="far fa-hand-point-right"></i> Go</a>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4 col-lg-3">
-        <div class="card border-danger">
-          <div class="card-body">
-            <h2 class="card-title fw-bold fs-5"><i
-                class="fas fa-file-signature text-danger position-absolute start-50 top-0 translate-middle fs-2"></i><br>
-              Get a Quote</h2>
-            <p class="card-text text-muted">Best Cost in the Market</p>
-            <a href="ship.html" class="btn btn-danger stretched-link"><i class="far fa-hand-point-right"></i> Go</a>
+        <div class="col-md-4 col-lg-3">
+          <div class="card border-danger">
+            <div class="card-body">
+              <h2 class="card-title fw-bold fs-5"><i
+                  class="fas fa-file-signature text-danger position-absolute start-50 top-0 translate-middle fs-2"></i><br>
+                Get a Quote</h2>
+              <p class="card-text text-muted">Best Cost in the Market</p>
+              <a href="ship.html" class="btn btn-danger stretched-link"><i class="far fa-hand-point-right"></i> Go</a>
+            </div>
           </div>
         </div>
+
+      </div>
+    </section>
+    <!-- TRACK CODE END -->
+
+    <!-- ABOUT US CODE START -->
+    <br>
+    <section class="container rounded-4 text-center my-2 my-sm-5 bg-white pt-4 pb-5 shadow" id="Aboutus">
+      <h3 class="fs-3">About ATC</h3>
+      <hr class="w-25 mx-auto text-danger border-2">
+      <p class="my-4">We are from 1990 In Freight Forwarding market as a Transporter Our Aim is to provide you a
+        best service in genuine Price .</p>
+      <div class="row px-0 px-sm-5">
+        <div class="list-unstyled text-start lh-base col-lg-5 offset-lg-2 text-muted">
+          <li class="mb-1"> <i class="far fa-dot-circle text-danger"></i> No Hidden Charges are deducted to customer
+          </li>
+          <li class="mb-1"> <i class="far fa-dot-circle text-danger"></i> Always active with different different keys
+            for
+            possibilities of work</li>
+          <li class="mb-1"> <i class="far fa-dot-circle text-danger"></i> We have Strong platform in Modern Transport
+            Eco
+            system.</li>
+          <li class="mb-1"> <i class="far fa-dot-circle text-danger"></i> We always try to be best in the market .
+          </li>
+        </div>
+
+        <div class="vr p-0 bg-danger d-none d-lg-block" style="width: 2px;"></div>
+
+        <div class="list-unstyled mt-4 mt-lg-0 d-flex justify-content-center flex-column text-start lh-base col-lg-4 text-muted ps-4">
+          <div class="fs-5 fw-bold text-black mb-2">For more enquiries you can contact</div>
+          <div><i class="fas fa-envelope-open-text text-danger"></i> <strong class="text-danger">Mail Id:</strong> <a
+              href="mailto:ajaytransportcorporation@gmail.com"> ajaytransportcorporation@gmail.com</a></div>
+        </div>
+
       </div>
 
-    </div>
-  </section>
-  <!-- TRACK CODE END -->
+    </section>
+    <!-- ABOUT US CODE END -->
 
-  <!-- ABOUT US CODE START -->
-  <br>
-  <section class="container rounded-4 text-center my-5 bg-white pt-4 pb-5 shadow" id="Aboutus">
-    <h3 class="fs-3">About ATC</h3>
-    <hr class="w-25 mx-auto text-danger border-2">
-    <p class="my-4">We are from 1990 In Freight Forwarding market as a Transporter Our Aim is to provide you a
-      best service in genuine Price .</p>
-    <div class="row px-0 px-sm-5">
-      <div class="list-unstyled text-start lh-base col-md-5 offset-md-2 text-muted">
-        <li class="mb-1"> <i class="far fa-dot-circle text-danger"></i> No Hidden Charges are deducted to customer</li>
-        <li class="mb-1"> <i class="far fa-dot-circle text-danger"></i> Always active with different different keys for
-          possibilities of work</li>
-        <li class="mb-1"> <i class="far fa-dot-circle text-danger"></i> We have Strong platform in Modern Transport Eco
-          system.</li>
-        <li class="mb-1"> <i class="far fa-dot-circle text-danger"></i> We always try to be best in the market .
-        </li>
-      </div>
+    <!-- SERVICES CODE START -->
+    <section class="container text-center pt-4 pt-sm-2 pb-5" id="OurServices">
+      <h4 class="fs-3">Business Only</h4>
+      <hr class="w-25 mx-auto text-danger border-2">
+      <p class="my-2">Find Out How we can Revolutionize Your Buisness As a sevice Provider. </p>
+      <div class="fw-bold my-3">SOLUTIONS AVAILABLE</div>
 
-      <div class="vr p-0 bg-danger d-none d-md-block" style="width: 2px;"></div>
+      <div class="row row-cols-md-2 gy-4 mx-auto" style="max-width: 700px;">
 
-      <div
-        class="list-unstyled mt-4 mt-md-0 d-flex justify-content-center flex-column text-start lh-base col-md-4 text-muted ps-4">
-        <div class="fs-5 fw-bold text-black mb-2">For more enquiries you can contact</div>
-        <div><i class="fas fa-envelope-open-text text-danger"></i> <strong class="text-danger">Mail Id:</strong> <a
-            href="mailto:ajaytransportcorporation@gmail.com"> ajaytransportcorporation@gmail.com</a></div>
-      </div>
+        <div class="col-12">
 
-    </div>
-
-  </section>
-  <!-- ABOUT US CODE END -->
-
-  <!-- SERVICES CODE START -->
-  <section class="container text-center pt-2 pb-5" id="OurServices">
-    <h4 class="fs-3">Business Only</h4>
-    <hr class="w-25 mx-auto text-danger border-2">
-    <p class="my-2">Find Out How we can Revolutionize Your Buisness As a sevice Provider. </p>
-    <div class="fw-bold my-3">SOLUTIONS AVAILABLE</div>
-
-    <div class="row row-cols-md-2 gy-4 mx-auto" style="max-width: 700px;">
-
-      <div class="col-12">
-
-        <div class="card card-body">
-          <div class="d-flex">
-            <div class="flex-shrink-0 me-3"><i class="fas fa-hand-point-right animi_left"></i></div>
-            <div class="flex-grow-1 text-start"><i class="fas fa-warehouse text-danger"></i> Ware housing</div>
+          <div class="card card-body">
+            <div class="d-flex">
+              <div class="flex-shrink-0 me-3"><i class="fas fa-hand-point-right animi_left"></i></div>
+              <div class="flex-grow-1 text-start"><i class="fas fa-warehouse text-danger"></i> Ware housing</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-12">
-        <div class="card card-body">
-          <div class="d-flex">
-            <div class="flex-shrink-0 me-3"><i class="fas fa-hand-point-right animi_left"></i></div>
-            <div class="flex-grow-1 text-start"><i class="fa fa-truck text-danger"></i> Transport</div>
+        <div class="col-12">
+          <div class="card card-body">
+            <div class="d-flex">
+              <div class="flex-shrink-0 me-3"><i class="fas fa-hand-point-right animi_left"></i></div>
+              <div class="flex-grow-1 text-start"><i class="fa fa-truck text-danger"></i> Transport</div>
+            </div>
+
           </div>
-
         </div>
-      </div>
 
-      <div class="col-12">
-        <div class="card card-body">
-          <div class="d-flex">
-            <div class="flex-shrink-0 me-3"><i class="fas fa-hand-point-right animi_left"></i></div>
-            <div class="flex-grow-1 text-start"><i class="fas fa-people-carry text-danger"></i> Packaging</div>
+        <div class="col-12">
+          <div class="card card-body">
+            <div class="d-flex">
+              <div class="flex-shrink-0 me-3"><i class="fas fa-hand-point-right animi_left"></i></div>
+              <div class="flex-grow-1 text-start"><i class="fas fa-people-carry text-danger"></i> Packaging</div>
+            </div>
+
           </div>
-
         </div>
-      </div>
 
-      <div class="col-12">
-        <div class="card card-body">
-          <div class="d-flex">
-            <div class="flex-shrink-0 me-3"><i class="fas fa-hand-point-right animi_left"></i></div>
-            <div class="flex-grow-1 text-start"><i class="fas fa-pallet text-danger"></i> Pallets</div>
+        <div class="col-12">
+          <div class="card card-body">
+            <div class="d-flex">
+              <div class="flex-shrink-0 me-3"><i class="fas fa-hand-point-right animi_left"></i></div>
+              <div class="flex-grow-1 text-start"><i class="fas fa-pallet text-danger"></i> Pallets</div>
+            </div>
+
           </div>
-
         </div>
+
+
       </div>
-
-
-    </div>
-    <a href="contact_us.html" class="btn btn-danger mt-3">Connect for Solutions <i class="fas fa-truck"
-        aria-hidden="true"></i></a>
-  </section>
-  <!-- SERVICES CODE END -->
-</main>
+      <a href="ship.html" class="btn btn-danger mt-3">Connect for Solutions <i class="fas fa-truck"
+          aria-hidden="true"></i></a>
+    </section>
+    <!-- SERVICES CODE END -->
+  </main>
 
   <!-- FOOTER CODE START -->
   <footer class="bg-white py-4">
@@ -225,13 +233,50 @@
     </div>
   </footer>
   <!-- FOOTER CODE END -->
-  <script>
+
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("button-addon2").addEventListener("click", function () {
         let lr = document.getElementById("track").value;
         const form = document.getElementById("trackForm");
         form.action = `https://bharattransportsoftware.com/ajay/track_report.php?lr=${encodeURIComponent(lr)}&iswebsite=1`;
         window.open(form.action, '_blank');
+      });
+    });
+  </script> -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("button-addon2").addEventListener("click", function () {
+        let gr_no = document.getElementById("track").value;
+
+        if (!gr_no) {
+          alert("Please enter a GR number!");
+          return;
+        }
+
+        $.ajax({
+          url: 'https://bharattransportsoftware.com/ajay/ajax.php',
+          type: 'GET',
+          data: {
+            type: 'track_gr',
+            gr_no: gr_no,
+            iswebsite: 1,
+          },
+          dataType: 'json',
+          success: function (response) {
+            console.log('Response:', response);
+            if (response && response.book_gr.length > 0) {
+              alert("GR Data: " + response.book_gr.map(item => item.gr_no).join(", "));
+            } else {
+              alert("No data found for the provided GR number.");
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error('Error:', error);
+            alert("An error occurred while fetching the data.");
+          }
+        });
       });
     });
   </script>

@@ -48,15 +48,21 @@ footer .socialMedia a{ width: 40px; height: 40px; display: inline-block; text-de
 footer .socialMedia a:hover{ transition: all 0.4s ease; transform: scale(1.1) rotate(360deg); background-color: var(--bs-black)!important;}
 /* PROJECT END CODE */
 
-
-@media only screen and (max-width:767.98px){
-    header{position: static; background-color: #fff;}
+@media only screen and (max-width:991.98px){   
     header .nav-link{margin-bottom: 10px; border-bottom: 1px dashed var(--c-primary);}
+}
+    
+
+@media only screen and (max-width:767.98px){    
     .toggleNav{display: none;}
     .asideMenubar{width: 100%; padding: 20px; display: block; position: static;}
     .main{margin-left: 0; display: block;}
 }
 @media only screen and (max-width:575.98px){
+    header .offcanvas{max-width: 60%;}
+    header .nav-link{font-size: 15px; padding:10px 4px!important;}
+    .atc_carousel .carousel-item img{height: 300px}
+    .atc_carousel .carousel-caption{top: 16%;}
     @keyframes animi_rightToLeft{   
         0%{transform: translateX(-1); position: absolute; right: 0; opacity: 0;}
         100%{transform: translateX(-1); position: absolute; right: 40%;}

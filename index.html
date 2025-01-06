@@ -234,7 +234,7 @@
   </footer>
   <!-- FOOTER CODE END -->
 
-  <script>
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("button-addon2").addEventListener("click", function () {
         let lr = document.getElementById("track").value;
@@ -243,8 +243,43 @@
         window.open(form.action, '_blank');
       });
     });
-  </script>
+  </script> -->
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("button-addon2").addEventListener("click", function () {
+        let gr_no = document.getElementById("track").value;
 
+        if (!gr_no) {
+          alert("Please enter a GR number!");
+          return;
+        }
+
+        $.ajax({
+          url: 'https://bharattransportsoftware.com/ajay/ajax.php',
+          type: 'GET',
+          data: {
+            type: 'track_gr',
+            gr_no: gr_no,
+            iswebsite: 1,
+          },
+          dataType: 'json',
+          success: function (response) {
+            console.log('Response:', response);
+            if (response && response.book_gr.length > 0) {
+              alert("GR Data: " + response.book_gr.map(item => item.gr_no).join(", "));
+            } else {
+              alert("No data found for the provided GR number.");
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error('Error:', error);
+            alert("An error occurred while fetching the data.");
+          }
+        });
+      });
+    });
+  </script>
   <script>
     $("header .nav-item").click(function () {
       $(this).addClass('active').siblings().removeClass('active');
